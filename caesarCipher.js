@@ -2,12 +2,12 @@
 let string = 'abc,de';
 let alphabet = 'abcdefhhijklmnopqrstuvwxyz';
 
-function caesarCipher(){
+function caesarCipher(x){
     let newString = '';
     for ( let i = 0; i < string.length; i++){
         if(alphabet.includes(string[i])){
-        let n = alphabet.indexOf(string[i]) + 2
-       newString = newString + alphabet[n];
+            let n = alphabet.indexOf(string[i]) + x
+            newString = newString + alphabet[n];
         }else {
             newString = newString + string[i];
         }
